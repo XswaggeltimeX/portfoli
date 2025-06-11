@@ -20,6 +20,15 @@
         display: block;
         text-align: center;
     }
+
+    .contact-item {
+        margin-bottom: 15px;
+    }
+    
+    .contact-item a {
+        font-size: 14px;
+        word-break: break-word;
+    }
 }
 
 /* Tablet styles */

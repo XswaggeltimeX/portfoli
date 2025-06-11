@@ -179,4 +179,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    
+    // LinkedIn link tracking
+    document.querySelector('a[href*="linkedin.com"]')?.addEventListener('click', function() {
+        console.log('LinkedIn profiel bezocht');
+    });
 });
