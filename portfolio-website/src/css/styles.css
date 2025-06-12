@@ -368,20 +368,38 @@ html::-webkit-scrollbar {
 
 /* Vaardigheden */
 .skills-container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 3rem;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 2rem;
+    grid-template-areas: 
+        "ict personal"
+        "tools .";
+}
+
+.skills-category:nth-child(1) {
+    grid-area: ict;
+}
+
+.skills-category:nth-child(2) {
+    grid-area: personal;
+}
+
+.skills-category:nth-child(3) {
+    grid-area: tools;
+    max-width: 500px;
 }
 
 .skills-category {
     background: white;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
+    min-height: auto;
 }
 
 .skills-category::before {
@@ -401,8 +419,8 @@ html::-webkit-scrollbar {
 
 .skills-category h3 {
     color: #667eea;
-    margin-bottom: 2rem;
-    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -410,7 +428,7 @@ html::-webkit-scrollbar {
 
 .skill-item {
     position: relative;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .skill-item::after {
@@ -434,13 +452,14 @@ html::-webkit-scrollbar {
 
 .skill-name {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
     font-weight: 600;
     color: #333;
+    font-size: 0.95rem;
 }
 
 .skill-bar {
-    height: 8px;
+    height: 6px;
     background: #e9ecef;
     border-radius: 4px;
     overflow: hidden;
@@ -467,21 +486,16 @@ html::-webkit-scrollbar {
     animation: shimmer 2s infinite;
 }
 
-@keyframes shimmer {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
-}
-
 .skill-tag {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    padding: 0.8rem 1.4rem;
-    border-radius: 20px;
-    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    border-radius: 18px;
+    font-size: 0.9rem;
     font-weight: 500;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: inline-block;
-    margin: 0.4rem;
+    margin: 0.2rem;
 }
 
 .skill-tag:hover {
@@ -492,27 +506,29 @@ html::-webkit-scrollbar {
 .soft-skills {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.8rem;
-    justify-content: space-between;
+    gap: 0.6rem;
+    justify-content: flex-start;
     align-items: center;
 }
 
 /* Tools & Technologieën */
 .tools-skills {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    max-width: 100%;
 }
 
 .tool-item {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
-    padding: 1rem;
+    gap: 0.6rem;
+    padding: 0.8rem;
     background: #f8f9fa;
     border-radius: 8px;
     border: 2px solid #e9ecef;
     transition: all 0.3s ease;
+    min-height: 50px;
 }
 
 .tool-item:hover {
@@ -522,16 +538,17 @@ html::-webkit-scrollbar {
 }
 
 .tool-item i {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #667eea;
-    width: 25px;
+    width: 20px;
     text-align: center;
+    flex-shrink: 0;
 }
 
 .tool-item span {
     font-weight: 500;
     color: #333;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
 }
 
 /* Hobby's */
@@ -840,4 +857,9 @@ html::-webkit-scrollbar {
 @keyframes float {
     0%, 100% { transform: translateY(0px) rotate(0deg); }
     50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
 }

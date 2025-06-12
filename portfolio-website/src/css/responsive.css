@@ -1,5 +1,51 @@
 /* Responsive styles for the portfolio website */
 
+/* Mobile First - Base styles for small screens */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .section {
+        padding: 3rem 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .avatar-circle {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .avatar-circle i {
+        font-size: 3rem;
+    }
+    
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+}
+
 /* Mobile styles */
 @media (max-width: 768px) {
     body {
@@ -29,6 +75,93 @@
         font-size: 14px;
         word-break: break-word;
     }
+    
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .main-nav ul {
+        gap: 1.5rem;
+    }
+    
+    /* Skills responsive */
+    .skills-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "ict"
+            "personal"
+            "tools";
+        gap: 2rem;
+    }
+    
+    .skills-category:nth-child(3) {
+        max-width: 100%;
+    }
+    
+    .tools-skills {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Education timeline mobile */
+    .education-timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 4rem !important;
+        padding-right: 0 !important;
+    }
+    
+    .timeline-marker {
+        left: 22px !important;
+        right: auto !important;
+    }
+    
+    /* Experience grid mobile */
+    .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    /* Hobbies mobile */
+    .hobbys-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Contact mobile */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-item {
+        font-size: 1rem;
+    }
+    
+    .contact-item a {
+        font-size: 0.95rem;
+        word-break: break-word;
+    }
+    
+    /* Footer mobile */
+    .site-footer .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .footer-links {
+        justify-content: center;
+    }
 }
 
 /* Tablet styles */
@@ -50,25 +183,115 @@
         display: flex;
         justify-content: space-around;
     }
+    
+    .hero-title {
+        font-size: 3.2rem;
+    }
+    
+    .skills-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "ict"
+            "personal"
+            "tools";
+        gap: 2.5rem;
+    }
+    
+    .skills-category:nth-child(3) {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .tools-skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hobbys-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+/* Large tablet and small desktop */
+@media (min-width: 1025px) and (max-width: 1199px) {
+    .hero-title {
+        font-size: 3.4rem;
+    }
+    
+    .skills-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "ict personal"
+            "tools .";
+    }
+    
+    .experience-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hobbys-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .contact-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* Desktop styles */
-@media (min-width: 1025px) {
-    body {
-        font-size: 20px;
+@media (min-width: 1200px) {
+    .hero-title {
+        font-size: 3.5rem;
     }
-
-    header {
-        justify-content: space-between;
+    
+    .skills-container {
+        grid-template-columns: 1.2fr 1fr;
+        grid-template-areas: 
+            "ict personal"
+            "tools .";
     }
-
-    .project {
-        flex-direction: row;
-        margin: 40px 0;
+    
+    .experience-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
+    
+    .hobbys-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .contact-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-    .skills {
-        display: flex;
-        justify-content: space-between;
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .skills-category:hover::before,
+    .hobby-card:hover::before,
+    .experience-card:hover,
+    .hobby-card:hover,
+    .tool-item:hover,
+    .skill-tag:hover,
+    .btn-primary:hover {
+        transform: none;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 }
