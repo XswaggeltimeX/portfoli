@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daan van den Hombergh - Student Software Development</title>
+    <meta name="description" content="Portfolio van Daan van den Hombergh, student Software Development gespecialiseerd in frontend development.">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header class="hero">
-        <div class="particles"></div>
+        <div class="particles" aria-hidden="true"></div>
         <div class="hero-content">
             <div class="profile-image">
-                <div class="avatar-circle">
-                    <i class="fas fa-user"></i>
+                <div class="avatar-circle" aria-label="Profiel avatar">
+                    <i class="fas fa-user" aria-hidden="true"></i>
                 </div>
             </div>
             <h1 class="hero-title">DAAN VAN DEN HOMBERGH</h1>
             <p class="hero-subtitle">STUDENT SOFTWARE DEVELOPMENT</p>
-            <nav class="main-nav">
+            <nav class="main-nav" role="navigation" aria-label="Hoofdnavigatie">
                 <ul>
                     <li><a href="#about">Over Mij</a></li>
                     <li><a href="#education">Opleiding</a></li>
@@ -50,11 +52,11 @@
             <div class="container">
                 <h2 class="section-title">Opleiding</h2>
                 <div class="education-timeline">
-                    <div class="timeline-item current">
-                        <div class="timeline-marker"></div>
+                    <article class="timeline-item current">
+                        <div class="timeline-marker" aria-hidden="true"></div>
                         <div class="timeline-content">
                             <h3>Vista College</h3>
-                            <p class="timeline-subtitle">2023 - heden</p>
+                            <time class="timeline-subtitle" datetime="2023">2023 - heden</time>
                             <div class="course-details">
                                 <h4>Software Developer (MBO niveau 4)</h4>
                                 <p><strong>Huidige status:</strong> Tweede jaar student</p>
@@ -64,14 +66,14 @@
                                 <p>2024: A1/A3 Drone Piloot - Dutch Drone Academy, Beek</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
+                    </article>
+                    <article class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true"></div>
                         <div class="timeline-content">
                             <h3>Bonnenfanten College</h3>
-                            <p class="timeline-subtitle">2019 - 2023</p>
+                            <time class="timeline-subtitle" datetime="2019/2023">2019 - 2023</time>
                             <div class="course-details">
-                                <h4>HAVO - Economie & Maatschappij</h4>
+                                <h4>HAVO - Economie &amp; Maatschappij</h4>
                                 <p><strong>Afgerond:</strong> Tot en met jaar 4</p>
                                 <p><strong>Hoofdvakken:</strong></p>
                                 <ul>
@@ -84,7 +86,7 @@
                                 <p>Muziektalent - Muzikale vorming en uitvoering</p>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -93,26 +95,26 @@
             <div class="container">
                 <h2 class="section-title">Werkervaring</h2>
                 <div class="experience-grid">
-                    <div class="experience-card">
-                        <div class="experience-header">
+                    <article class="experience-card">
+                        <header class="experience-header">
                             <h3>Keukenpersoneel bij Kruisherenhotel</h3>
-                            <span class="experience-period">2024 - heden</span>
-                        </div>
+                            <time class="experience-period" datetime="2024">2024 - heden</time>
+                        </header>
                         <div class="experience-task">Taak: Afwasser</div>
                         <p class="experience-description">
                             Als afwasser zorg ik ervoor dat de keuken schoon blijft. Ik was borden, pannen en kookspullen. Ook houd ik de werkplekken netjes. Het is druk werk en ik moet snel zijn.
                         </p>
-                    </div>
-                    <div class="experience-card">
-                        <div class="experience-header">
+                    </article>
+                    <article class="experience-card">
+                        <header class="experience-header">
                             <h3>Orderpicker bij Sligro</h3>
-                            <span class="experience-period">2023-2024</span>
-                        </div>
+                            <time class="experience-period" datetime="2023/2024">2023-2024</time>
+                        </header>
                         <div class="experience-task">Taak: Verzamelen en klaarzetten van bestellingen</div>
                         <p class="experience-description">
                             Als orderpicker haalde ik spullen uit het magazijn voor bestellingen. Ik moest goed opletten dat ik de juiste dingen pakte. Dit werk leerde me om snel en netjes te werken en goed samen te werken met mijn collega's.
                         </p>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -121,49 +123,49 @@
             <div class="container">
                 <h2 class="section-title">Vaardigheden</h2>
                 <div class="skills-container">
-                    <div class="skills-category">
-                        <h3><i class="fas fa-code"></i> ICT Vaardigheden</h3>
+                    <article class="skills-category">
+                        <h3><i class="fas fa-code" aria-hidden="true"></i> ICT Vaardigheden</h3>
                         <div class="skills-list">
                             <div class="skill-item">
                                 <span class="skill-name">HTML</span>
-                                <div class="skill-bar">
+                                <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
                                     <div class="skill-progress" style="width: 85%"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">CSS</span>
-                                <div class="skill-bar">
+                                <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                                     <div class="skill-progress" style="width: 80%"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">JavaScript</span>
-                                <div class="skill-bar">
+                                <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
                                     <div class="skill-progress" style="width: 70%"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">C#</span>
-                                <div class="skill-bar">
+                                <div class="skill-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
                                     <div class="skill-progress" style="width: 45%"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">Python</span>
-                                <div class="skill-bar">
+                                <div class="skill-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
                                     <div class="skill-progress" style="width: 40%"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">PHP</span>
-                                <div class="skill-bar">
+                                <div class="skill-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
                                     <div class="skill-progress" style="width: 35%"></div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="skills-category">
-                        <h3><i class="fas fa-user"></i> Persoonlijke Vaardigheden</h3>
+                    </article>
+                    <article class="skills-category">
+                        <h3><i class="fas fa-user" aria-hidden="true"></i> Persoonlijke Vaardigheden</h3>
                         <div class="soft-skills">
                             <span class="skill-tag">Doorzettingsvermogen</span>
                             <span class="skill-tag">Leergierig</span>
@@ -172,59 +174,59 @@
                             <span class="skill-tag">Communiceer duidelijk</span>
                             <span class="skill-tag">Probleemoplossend denken</span>
                         </div>
-                    </div>
-                    <div class="skills-category">
-                        <h3><i class="fas fa-tools"></i> Tools & Technologieën</h3>
+                    </article>
+                    <article class="skills-category">
+                        <h3><i class="fas fa-tools" aria-hidden="true"></i> Tools &amp; Technologieën</h3>
                         <div class="tools-skills">
                             <div class="tool-item">
-                                <i class="fab fa-git-alt"></i>
-                                <span>Git & GitHub</span>
+                                <i class="fab fa-git-alt" aria-hidden="true"></i>
+                                <span>Git &amp; GitHub</span>
                             </div>
                             <div class="tool-item">
-                                <i class="fas fa-code"></i>
+                                <i class="fas fa-code" aria-hidden="true"></i>
                                 <span>Visual Studio Code</span>
                             </div>
                             <div class="tool-item">
-                                <i class="fab fa-windows"></i>
+                                <i class="fab fa-windows" aria-hidden="true"></i>
                                 <span>Windows</span>
                             </div>
                             <div class="tool-item">
-                                <i class="fas fa-database"></i>
+                                <i class="fas fa-database" aria-hidden="true"></i>
                                 <span>MySQL</span>
                             </div>
                             <div class="tool-item">
-                                <i class="fab fa-chrome"></i>
+                                <i class="fab fa-chrome" aria-hidden="true"></i>
                                 <span>Browser DevTools</span>
                             </div>
                             <div class="tool-item">
-                                <i class="fas fa-laptop-code"></i>
+                                <i class="fas fa-laptop-code" aria-hidden="true"></i>
                                 <span>Responsive Design</span>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
         <section id="hobbys" class="section">
             <div class="container">
-                <h2 class="section-title">Hobby's & Interesses</h2>
+                <h2 class="section-title">Hobby's &amp; Interesses</h2>
                 <div class="hobbys-grid">
-                    <div class="hobby-card">
-                        <i class="fas fa-running"></i>
+                    <article class="hobby-card">
+                        <i class="fas fa-running" aria-hidden="true"></i>
                         <h3>Sporten</h3>
                         <p>Ik hou van hardlopen en fietsen. Sport helpt me om fit te blijven en doelen te halen. Het geeft me ook rust in mijn hoofd.</p>
-                    </div>
-                    <div class="hobby-card">
-                        <i class="fas fa-dumbbell"></i>
+                    </article>
+                    <article class="hobby-card">
+                        <i class="fas fa-dumbbell" aria-hidden="true"></i>
                         <h3>Fitness</h3>
                         <p>Ik ga graag naar de sportschool. Het helpt me om sterk te blijven en stress kwijt te raken. Het geeft me energie voor school en werk.</p>
-                    </div>
-                    <div class="hobby-card">
-                        <i class="fas fa-car"></i>
+                    </article>
+                    <article class="hobby-card">
+                        <i class="fas fa-car" aria-hidden="true"></i>
                         <h3>Auto's</h3>
                         <p>Ik vind auto's heel interessant. Ik kijk graag hoe ze werken en wat er allemaal onder de motorkap zit. Nieuwe technologie in auto's vind ik geweldig.</p>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -235,41 +237,46 @@
                 <div class="contact-content">
                     <div class="contact-info">
                         <h3>Contactinformatie</h3>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>0682437275</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>daan.vandenhombergh@outlook.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-linkedin"></i>
-                            <a href="https://linkedin.com/in/daan-m-van-den-hombergh-326819311" target="_blank">LinkedIn Profiel</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Maastricht, Nederland</span>
-                        </div>
+                        <address>
+                            <div class="contact-item">
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                                <a href="tel:+31682437275">0682437275</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <a href="mailto:daan.vandenhombergh@outlook.com">daan.vandenhombergh@outlook.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                <a href="https://linkedin.com/in/daan-m-van-den-hombergh-326819311" target="_blank" rel="noopener noreferrer">LinkedIn Profiel</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                <span>Maastricht, Nederland</span>
+                            </div>
+                        </address>
                     </div>
                     <div class="contact-form">
                         <h3>Stuur een bericht</h3>
-                        <form id="contactForm" action="https://formspree.io/f/movwvvwq" method="POST">
+                        <form id="contactForm" action="https://formspree.io/f/movwvvwq" method="POST" novalidate>
                             <div class="form-group">
-                                <input type="text" name="name" placeholder="Uw naam" required>
+                                <label for="name" class="sr-only">Uw naam</label>
+                                <input type="text" id="name" name="name" placeholder="Uw naam" required aria-required="true">
                             </div>
                             <div class="form-group">
-                                <input type="email" name="email" placeholder="Uw email" required>
+                                <label for="email" class="sr-only">Uw email</label>
+                                <input type="email" id="email" name="email" placeholder="Uw email" required aria-required="true">
                             </div>
                             <div class="form-group">
-                                <textarea name="message" placeholder="Uw bericht" rows="5" required></textarea>
+                                <label for="message" class="sr-only">Uw bericht</label>
+                                <textarea id="message" name="message" placeholder="Uw bericht" rows="5" required aria-required="true"></textarea>
                             </div>
                             <input type="hidden" name="_subject" value="Portfolio Contact: Nieuw bericht van website">
                             <input type="hidden" name="_captcha" value="true">
-                            <input type="text" name="_gotcha" style="display:none">
+                            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
                             <button type="submit" class="btn-primary">Verstuur bericht</button>
                         </form>
-                        <div id="form-status"></div>
+                        <div id="form-status" role="status" aria-live="polite"></div>
                     </div>
                 </div>
             </div>
@@ -279,10 +286,10 @@
     <footer class="site-footer">
         <div class="container">
             <p>&copy; 2024 Daan van den Hombergh. Alle rechten voorbehouden.</p>
-            <div class="footer-links">
+            <nav class="footer-links" aria-label="Footer navigatie">
                 <a href="#about">Over Mij</a>
                 <a href="#contact">Contact</a>
-            </div>
+            </nav>
         </div>
     </footer>
 
