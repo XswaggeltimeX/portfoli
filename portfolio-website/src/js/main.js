@@ -119,7 +119,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const skillItems = document.querySelectorAll('.skill-item');
     skillItems.forEach(item => {
-        const skillName = item.querySelector('.skill-name')?.textContent;
         const skillProgress = item.querySelector('.skill-progress');
         if (skillProgress) {
             const width = skillProgress.style.width;
@@ -143,8 +142,8 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             
             const formData = new FormData(contactForm);
-            
             const submitBtn = contactForm.querySelector('.btn-primary');
+            
             submitBtn.textContent = 'Versturen...';
             submitBtn.disabled = true;
             
@@ -163,11 +162,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     formStatus.innerHTML = '<div class="success-message">✅ Bedankt! Uw bericht is succesvol verzonden.</div>';
                     contactForm.reset();
                 } else {
-                    console.log('Formspree errors:', data.errors);
                     formStatus.innerHTML = '<div class="error-message">❌ ' + (data.error || 'Er ging iets mis. Probeer het later opnieuw.') + '</div>';
                 }
             } catch (error) {
-                console.log('Network error:', error);
                 formStatus.innerHTML = '<div class="error-message">❌ Netwerkfout. Controleer uw internetverbinding.</div>';
             } finally {
                 submitBtn.textContent = 'Verstuur bericht';
@@ -180,8 +177,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // LinkedIn link tracking
-    document.querySelector('a[href*="linkedin.com"]')?.addEventListener('click', function() {
-        console.log('LinkedIn profiel bezocht');
-    });
+    const linkedinLink = document.querySelector('a[href*="linkedin.com"]');
+    if (linkedinLink) {
+        linkedinLink.addEventListener('click', function() {
+            console.log('LinkedIn profiel bezocht');
+        });
+    }
 });
