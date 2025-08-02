@@ -6,112 +6,179 @@
     <title>Daan van den Hombergh - Student Software Development</title>
     <meta name="description" content="Portfolio van Daan van den Hombergh, student Software Development gespecialiseerd in frontend development.">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header class="hero">
-        <div class="particles" aria-hidden="true"></div>
-        <div class="hero-content">
-            <div class="profile-image">
-                <div class="avatar-circle" aria-label="Profiel avatar">
-                    <i class="fas fa-user" aria-hidden="true"></i>
+    <header class="hero min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="particles absolute inset-0" aria-hidden="true"></div>
+        
+        <!-- Floating geometric shapes -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+        </div>
+        
+        <div class="hero-content relative z-10 text-center text-white max-w-4xl mx-auto px-6" data-aos="fade-up">
+            <div class="profile-image mb-8" data-aos="zoom-in" data-aos-delay="200">
+                <div class="avatar-circle w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-blue-400 to-purple-600 flex items-center justify-center shadow-2xl transform hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-user text-5xl text-white" aria-hidden="true"></i>
                 </div>
             </div>
-            <h1 class="hero-title">DAAN VAN DEN HOMBERGH</h1>
-            <p class="hero-subtitle">STUDENT SOFTWARE DEVELOPMENT</p>
-            <nav class="main-nav" role="navigation" aria-label="Hoofdnavigatie">
-                <ul>
-                    <li><a href="#about">Over Mij</a></li>
-                    <li><a href="#education">Opleiding</a></li>
-                    <li><a href="#experience">Werkervaring</a></li>
-                    <li><a href="#skills">Vaardigheden</a></li>
-                    <li><a href="#hobbys">Hobby's</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <h1 class="hero-title text-6xl md:text-7xl font-bold mb-4 tracking-wide" data-aos="fade-up" data-aos-delay="400">
+                DAAN VAN DEN HOMBERGH
+            </h1>
+            <p class="hero-subtitle text-2xl md:text-3xl mb-8 text-blue-200 font-light" data-aos="fade-up" data-aos-delay="600">
+                STUDENT SOFTWARE DEVELOPMENT
+            </p>
+            <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="800">
+                <i class="fas fa-chevron-down text-2xl animate-bounce text-blue-300"></i>
+            </div>
         </div>
+        
+        <!-- Modern navigation -->
+        <nav class="main-nav fixed top-6 left-1/2 transform -translate-x-1/2 z-50 bg-white/10 backdrop-blur-md rounded-full px-8 py-4 shadow-lg border border-white/20" role="navigation" aria-label="Hoofdnavigatie">
+            <ul class="flex space-x-8">
+                <li><a href="#about" class="nav-link text-white hover:text-blue-300 transition-colors duration-300">Over Mij</a></li>
+                <li><a href="#education" class="nav-link text-white hover:text-blue-300 transition-colors duration-300">Opleiding</a></li>
+                <li><a href="#experience" class="nav-link text-white hover:text-blue-300 transition-colors duration-300">Werkervaring</a></li>
+                <li><a href="#skills" class="nav-link text-white hover:text-blue-300 transition-colors duration-300">Vaardigheden</a></li>
+                <li><a href="#hobbys" class="nav-link text-white hover:text-blue-300 transition-colors duration-300">Hobby's</a></li>
+                <li><a href="#contact" class="nav-link text-white hover:text-blue-300 transition-colors duration-300">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section id="about" class="section">
-            <div class="container">
-                <h2 class="section-title">Persoonlijk Profiel</h2>
-                <div class="profile-content">
-                    <p class="profile-text">
-                        Ik ben een student software development en ik vind websites maken heel leuk. Vooral de voorkant van websites spreekt mij aan. 
-                        Ik wil graag dingen maken die makkelijk te gebruiken zijn. Ik leer elke dag nieuwe dingen bij en dat vind ik fijn. 
-                        Ik werk graag samen met anderen, maar kan ook goed alleen werken.
-                    </p>
+        <section id="about" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <h2 class="text-4xl font-bold text-center mb-16 text-gray-800" data-aos="fade-up">Persoonlijk Profiel</h2>
+                <div class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+                        <div class="flex flex-col md:flex-row items-center gap-8">
+                            <div class="flex-shrink-0">
+                                <div class="w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-user text-3xl text-white"></i>
+                                </div>
+                            </div>
+                            <div class="flex-1 text-center md:text-left">
+                                <p class="text-lg text-gray-700 leading-relaxed">
+                                    Ik ben een student software development en ik vind websites maken heel leuk. Vooral de voorkant van websites spreekt mij aan. 
+                                    Ik wil graag dingen maken die makkelijk te gebruiken zijn. Ik leer elke dag nieuwe dingen bij en dat vind ik fijn. 
+                                    Ik werk graag samen met anderen, maar kan ook goed alleen werken.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="education" class="section section-alt">
-            <div class="container">
-                <h2 class="section-title">Opleiding</h2>
-                <div class="education-timeline">
-                    <article class="timeline-item current">
-                        <div class="timeline-marker" aria-hidden="true"></div>
-                        <div class="timeline-content">
-                            <h3>Vista College</h3>
-                            <time class="timeline-subtitle" datetime="2023">2023 - heden</time>
-                            <div class="course-details">
-                                <h4>Software Developer (MBO niveau 4)</h4>
-                                <p><strong>Huidige status:</strong> Tweede jaar student</p>
-                                <p><strong>Focus:</strong> Frontend Development</p>
-                                <p>Ik leer vooral hoe je de voorkant van websites maakt. Ik werk met HTML, CSS en JavaScript om websites mooi en makkelijk te gebruiken te maken.</p>
-                                <p><strong>Extra certificering:</strong></p>
-                                <p>2024: A1/A3 Drone Piloot - Dutch Drone Academy, Beek</p>
+        <section id="education" class="py-20 bg-white">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <h2 class="text-4xl font-bold text-center mb-16 text-gray-800" data-aos="fade-up">Opleiding</h2>
+                <div class="relative" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Timeline line -->
+                    <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-600"></div>
+                    
+                    <div class="space-y-12">
+                        <article class="relative flex items-start">
+                            <div class="absolute left-6 w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-lg"></div>
+                            <div class="ml-20 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 shadow-lg">
+                                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                    <h3 class="text-2xl font-bold text-gray-800">Vista College</h3>
+                                    <span class="text-blue-600 font-semibold bg-blue-100 px-3 py-1 rounded-full text-sm">2023 - heden</span>
+                                </div>
+                                <h4 class="text-xl font-semibold text-gray-700 mb-3">Software Developer (MBO niveau 4)</h4>
+                                <div class="grid md:grid-cols-2 gap-4 text-gray-600">
+                                    <div>
+                                        <p><strong class="text-gray-800">Huidige status:</strong> Tweede jaar student</p>
+                                        <p><strong class="text-gray-800">Focus:</strong> Frontend Development</p>
+                                    </div>
+                                    <div>
+                                        <p><strong class="text-gray-800">Extra certificering:</strong></p>
+                                        <p class="text-sm">2024: A1/A3 Drone Piloot - Dutch Drone Academy, Beek</p>
+                                    </div>
+                                </div>
+                                <p class="mt-4 text-gray-700">
+                                    Ik leer vooral hoe je de voorkant van websites maakt. Ik werk met HTML, CSS en JavaScript om websites mooi en makkelijk te gebruiken te maken.
+                                </p>
                             </div>
-                        </div>
-                    </article>
-                    <article class="timeline-item">
-                        <div class="timeline-marker" aria-hidden="true"></div>
-                        <div class="timeline-content">
-                            <h3>Bonnenfanten College</h3>
-                            <time class="timeline-subtitle" datetime="2019/2023">2019 - 2023</time>
-                            <div class="course-details">
-                                <h4>HAVO - Economie &amp; Maatschappij</h4>
-                                <p><strong>Afgerond:</strong> Tot en met jaar 4</p>
-                                <p><strong>Hoofdvakken:</strong></p>
-                                <ul>
-                                    <li>Economie</li>
-                                    <li>Maatschappijleer</li>
-                                    <li>Geschiedenis</li>
-                                    <li>Wiskunde A</li>
-                                </ul>
-                                <p><strong>Extra activiteit:</strong></p>
-                                <p>Muziektalent - Muzikale vorming en uitvoering</p>
+                        </article>
+                        
+                        <article class="relative flex items-start">
+                            <div class="absolute left-6 w-4 h-4 bg-purple-500 rounded-full border-4 border-white shadow-lg"></div>
+                            <div class="ml-20 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 shadow-lg">
+                                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                    <h3 class="text-2xl font-bold text-gray-800">Bonnenfanten College</h3>
+                                    <span class="text-purple-600 font-semibold bg-purple-100 px-3 py-1 rounded-full text-sm">2019 - 2023</span>
+                                </div>
+                                <h4 class="text-xl font-semibold text-gray-700 mb-3">HAVO - Economie &amp; Maatschappij</h4>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <p class="text-gray-600"><strong class="text-gray-800">Afgerond:</strong> Tot en met jaar 4</p>
+                                        <p class="text-gray-600 mt-2"><strong class="text-gray-800">Hoofdvakken:</strong></p>
+                                        <ul class="text-gray-600 text-sm mt-1 space-y-1">
+                                            <li>• Economie</li>
+                                            <li>• Maatschappijleer</li>
+                                            <li>• Geschiedenis</li>
+                                            <li>• Wiskunde A</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-600"><strong class="text-gray-800">Extra activiteit:</strong></p>
+                                        <p class="text-sm text-gray-600">Muziektalent - Muzikale vorming en uitvoering</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="experience" class="section">
-            <div class="container">
-                <h2 class="section-title">Werkervaring</h2>
-                <div class="experience-grid">
-                    <article class="experience-card">
-                        <header class="experience-header">
-                            <h3>Keukenpersoneel bij Kruisherenhotel</h3>
-                            <time class="experience-period" datetime="2024">2024 - heden</time>
-                        </header>
-                        <div class="experience-task">Taak: Afwasser</div>
-                        <p class="experience-description">
+        <section id="experience" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <h2 class="text-4xl font-bold text-center mb-16 text-gray-800" data-aos="fade-up">Werkervaring</h2>
+                <div class="grid md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="200">
+                    <article class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-utensils text-white text-lg"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-gray-800">Keukenpersoneel bij Kruisherenhotel</h3>
+                                <span class="text-green-600 font-semibold bg-green-100 px-2 py-1 rounded-full text-sm">2024 - heden</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Taak: Afwasser</span>
+                        </div>
+                        <p class="text-gray-700">
                             Als afwasser zorg ik ervoor dat de keuken schoon blijft. Ik was borden, pannen en kookspullen. Ook houd ik de werkplekken netjes. Het is druk werk en ik moet snel zijn.
                         </p>
                     </article>
-                    <article class="experience-card">
-                        <header class="experience-header">
-                            <h3>Orderpicker bij Sligro</h3>
-                            <time class="experience-period" datetime="2023/2024">2023-2024</time>
-                        </header>
-                        <div class="experience-task">Taak: Verzamelen en klaarzetten van bestellingen</div>
-                        <p class="experience-description">
+                    
+                    <article class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-orange-400 to-red-500 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-boxes text-white text-lg"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-gray-800">Orderpicker bij Sligro</h3>
+                                <span class="text-orange-600 font-semibold bg-orange-100 px-2 py-1 rounded-full text-sm">2023-2024</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Taak: Verzamelen en klaarzetten van bestellingen</span>
+                        </div>
+                        <p class="text-gray-700">
                             Als orderpicker haalde ik spullen uit het magazijn voor bestellingen. Ik moest goed opletten dat ik de juiste dingen pakte. Dit werk leerde me om snel en netjes te werken en goed samen te werken met mijn collega's.
                         </p>
                     </article>
@@ -119,90 +186,127 @@
             </div>
         </section>
 
-        <section id="skills" class="section section-alt">
-            <div class="container">
-                <h2 class="section-title">Vaardigheden</h2>
-                <div class="skills-container">
-                    <article class="skills-category">
-                        <h3><i class="fas fa-code" aria-hidden="true"></i> ICT Vaardigheden</h3>
-                        <div class="skills-list">
+        <section id="skills" class="py-20 bg-white">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <h2 class="text-4xl font-bold text-center mb-16 text-gray-800" data-aos="fade-up">Vaardigheden</h2>
+                <div class="grid lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="200">
+                    
+                    <!-- ICT Vaardigheden -->
+                    <article class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-6 shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-code text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">ICT Vaardigheden</h3>
+                        </div>
+                        <div class="space-y-4">
                             <div class="skill-item">
-                                <span class="skill-name">HTML</span>
-                                <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="skill-progress" style="width: 85%"></div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-sm font-medium text-gray-700">HTML</span>
+                                    <span class="text-sm text-gray-500">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full transition-all duration-1000 ease-out" style="width: 85%" data-width="85"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">CSS</span>
-                                <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="skill-progress" style="width: 80%"></div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-sm font-medium text-gray-700">CSS</span>
+                                    <span class="text-sm text-gray-500">80%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full transition-all duration-1000 ease-out" style="width: 80%" data-width="80"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">JavaScript</span>
-                                <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="skill-progress" style="width: 70%"></div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-sm font-medium text-gray-700">JavaScript</span>
+                                    <span class="text-sm text-gray-500">70%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full transition-all duration-1000 ease-out" style="width: 70%" data-width="70"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">C#</span>
-                                <div class="skill-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="skill-progress" style="width: 45%"></div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-sm font-medium text-gray-700">C#</span>
+                                    <span class="text-sm text-gray-500">45%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full transition-all duration-1000 ease-out" style="width: 45%" data-width="45"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">Python</span>
-                                <div class="skill-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="skill-progress" style="width: 40%"></div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-sm font-medium text-gray-700">Python</span>
+                                    <span class="text-sm text-gray-500">40%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full transition-all duration-1000 ease-out" style="width: 40%" data-width="40"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">PHP</span>
-                                <div class="skill-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="skill-progress" style="width: 35%"></div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-sm font-medium text-gray-700">PHP</span>
+                                    <span class="text-sm text-gray-500">35%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full transition-all duration-1000 ease-out" style="width: 35%" data-width="35"></div>
                                 </div>
                             </div>
                         </div>
                     </article>
                     
-                    <article class="skills-category">
-                        <h3><i class="fas fa-user" aria-hidden="true"></i> Persoonlijke Vaardigheden</h3>
-                        <div class="soft-skills">
-                            <span class="skill-tag">Doorzettingsvermogen</span>
-                            <span class="skill-tag">Leergierig</span>
-                            <span class="skill-tag">Werk goed samen in een team</span>
-                            <span class="skill-tag">Nauwkeurig</span>
-                            <span class="skill-tag">Communiceer duidelijk</span>
-                            <span class="skill-tag">Probleemoplossend denken</span>
+                    <!-- Persoonlijke Vaardigheden -->
+                    <article class="bg-gradient-to-br from-purple-50 to-pink-100 rounded-xl p-6 shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <div class="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-user text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Persoonlijke Vaardigheden</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-white text-purple-700 px-3 py-2 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-shadow">Doorzettingsvermogen</span>
+                            <span class="bg-white text-purple-700 px-3 py-2 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-shadow">Leergierig</span>
+                            <span class="bg-white text-purple-700 px-3 py-2 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-shadow">Werk goed samen in een team</span>
+                            <span class="bg-white text-purple-700 px-3 py-2 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-shadow">Nauwkeurig</span>
+                            <span class="bg-white text-purple-700 px-3 py-2 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-shadow">Communiceer duidelijk</span>
+                            <span class="bg-white text-purple-700 px-3 py-2 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-shadow">Probleemoplossend denken</span>
                         </div>
                     </article>
                     
-                    <article class="skills-category">
-                        <h3><i class="fas fa-tools" aria-hidden="true"></i> Tools &amp; Technologieën</h3>
-                        <div class="tools-skills">
-                            <div class="tool-item">
-                                <i class="fab fa-git-alt"></i>
-                                <span>Git &amp; GitHub</span>
+                    <!-- Tools & Technologieën -->
+                    <article class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-6 shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <div class="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-tools text-white"></i>
                             </div>
-                            <div class="tool-item">
-                                <i class="fas fa-code"></i>
-                                <span>Visual Studio Code</span>
+                            <h3 class="text-xl font-bold text-gray-800">Tools &amp; Technologieën</h3>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="flex items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                                <i class="fab fa-git-alt text-orange-500 mr-3 text-lg"></i>
+                                <span class="text-sm font-medium text-gray-700">Git &amp; GitHub</span>
                             </div>
-                            <div class="tool-item">
-                                <i class="fab fa-windows"></i>
-                                <span>Windows</span>
+                            <div class="flex items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                                <i class="fas fa-code text-blue-500 mr-3 text-lg"></i>
+                                <span class="text-sm font-medium text-gray-700">VS Code</span>
                             </div>
-                            <div class="tool-item">
-                                <i class="fas fa-database"></i>
-                                <span>MySQL</span>
+                            <div class="flex items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                                <i class="fab fa-windows text-blue-600 mr-3 text-lg"></i>
+                                <span class="text-sm font-medium text-gray-700">Windows</span>
                             </div>
-                            <div class="tool-item">
-                                <i class="fab fa-chrome"></i>
-                                <span>Browser DevTools</span>
+                            <div class="flex items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                                <i class="fas fa-database text-green-600 mr-3 text-lg"></i>
+                                <span class="text-sm font-medium text-gray-700">MySQL</span>
                             </div>
-                            <div class="tool-item">
-                                <i class="fas fa-laptop-code"></i>
-                                <span>Responsive Design</span>
+                            <div class="flex items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                                <i class="fab fa-chrome text-yellow-500 mr-3 text-lg"></i>
+                                <span class="text-sm font-medium text-gray-700">DevTools</span>
+                            </div>
+                            <div class="flex items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                                <i class="fas fa-laptop-code text-purple-500 mr-3 text-lg"></i>
+                                <span class="text-sm font-medium text-gray-700">Responsive</span>
                             </div>
                         </div>
                     </article>
@@ -210,91 +314,128 @@
             </div>
         </section>
 
-        <section id="hobbys" class="section">
-            <div class="container">
-                <h2 class="section-title">Hobby's &amp; Interesses</h2>
-                <div class="hobbys-grid">
-                    <article class="hobby-card">
-                        <i class="fas fa-running" aria-hidden="true"></i>
-                        <h3>Sporten</h3>
-                        <p>Ik hou van hardlopen en fietsen. Sport helpt me om fit te blijven en doelen te halen. Het geeft me ook rust in mijn hoofd.</p>
+        <section id="hobbys" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <h2 class="text-4xl font-bold text-center mb-16 text-gray-800" data-aos="fade-up">Hobby's &amp; Interesses</h2>
+                <div class="grid md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="200">
+                    <article class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl hover:transform hover:scale-105 transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-running text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Sporten</h3>
+                        <p class="text-gray-600">Ik hou van hardlopen en fietsen. Sport helpt me om fit te blijven en doelen te halen. Het geeft me ook rust in mijn hoofd.</p>
                     </article>
-                    <article class="hobby-card">
-                        <i class="fas fa-dumbbell" aria-hidden="true"></i>
-                        <h3>Fitness</h3>
-                        <p>Ik ga graag naar de sportschool. Het helpt me om sterk te blijven en stress kwijt te raken. Het geeft me energie voor school en werk.</p>
+                    
+                    <article class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl hover:transform hover:scale-105 transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-dumbbell text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Fitness</h3>
+                        <p class="text-gray-600">Ik ga graag naar de sportschool. Het helpt me om sterk te blijven en stress kwijt te raken. Het geeft me energie voor school en werk.</p>
                     </article>
-                    <article class="hobby-card">
-                        <i class="fas fa-car" aria-hidden="true"></i>
-                        <h3>Auto's</h3>
-                        <p>Ik vind auto's heel interessant. Ik kijk graag hoe ze werken en wat er allemaal onder de motorkap zit. Nieuwe technologie in auto's vind ik geweldig.</p>
+                    
+                    <article class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl hover:transform hover:scale-105 transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-r from-red-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-car text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Auto's</h3>
+                        <p class="text-gray-600">Ik vind auto's heel interessant. Ik kijk graag hoe ze werken en wat er allemaal onder de motorkap zit. Nieuwe technologie in auto's vind ik geweldig.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="section section-alt">
-            <div class="container">
-                <h2 class="section-title">Contact</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <h3>Contactinformatie</h3>
-                        <address>
-                            <div class="contact-item">
-                                <i class="fas fa-phone" aria-hidden="true"></i>
-                                <a href="tel:+31682437275">0682437275</a>
+        <section id="contact" class="py-20 bg-white">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <h2 class="text-4xl font-bold text-center mb-16 text-gray-800" data-aos="fade-up">Contact</h2>
+                <div class="grid md:grid-cols-2 gap-12" data-aos="fade-up" data-aos-delay="200">
+                    <div class="space-y-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Contactinformatie</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                                <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <a href="tel:+31682437275" class="text-gray-700 hover:text-blue-600 transition-colors">0682437275</a>
                             </div>
-                            <div class="contact-item">
-                                <i class="fas fa-envelope" aria-hidden="true"></i>
-                                <a href="mailto:daan.vandenhombergh@outlook.com">daan.vandenhombergh@outlook.com</a>
+                            <div class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                                <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <a href="mailto:daan.vandenhombergh@outlook.com" class="text-gray-700 hover:text-green-600 transition-colors">daan.vandenhombergh@outlook.com</a>
                             </div>
-                            <div class="contact-item">
-                                <i class="fab fa-linkedin" aria-hidden="true"></i>
-                                <a href="https://linkedin.com/in/daan-m-van-den-hombergh-326819311" target="_blank" rel="noopener noreferrer">LinkedIn Profiel</a>
+                            <div class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                                <div class="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fab fa-linkedin text-white"></i>
+                                </div>
+                                <a href="https://linkedin.com/in/daan-m-van-den-hombergh-326819311" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-blue-700 transition-colors">LinkedIn Profiel</a>
                             </div>
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                                <span>Maastricht, Nederland</span>
+                            <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+                                <div class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <span class="text-gray-700">Maastricht, Nederland</span>
                             </div>
-                        </address>
+                        </div>
                     </div>
-                    <div class="contact-form">
-                        <h3>Stuur een bericht</h3>
-                        <form id="contactForm" action="https://formspree.io/f/movwvvwq" method="POST" novalidate>
-                            <div class="form-group">
-                                <label for="name" class="sr-only">Uw naam</label>
-                                <input type="text" id="name" name="name" placeholder="Uw naam" required aria-required="true">
+                    
+                    <div class="bg-gray-50 rounded-xl p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Stuur een bericht</h3>
+                        <form id="contactForm" action="https://formspree.io/f/movwvvwq" method="POST" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Uw naam</label>
+                                <input type="text" id="name" name="name" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
                             </div>
-                            <div class="form-group">
-                                <label for="email" class="sr-only">Uw email</label>
-                                <input type="email" id="email" name="email" placeholder="Uw email" required aria-required="true">
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Uw email</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
                             </div>
-                            <div class="form-group">
-                                <label for="message" class="sr-only">Uw bericht</label>
-                                <textarea id="message" name="message" placeholder="Uw bericht" rows="5" required aria-required="true"></textarea>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Uw bericht</label>
+                                <textarea id="message" name="message" rows="5" required 
+                                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"></textarea>
                             </div>
                             <input type="hidden" name="_subject" value="Portfolio Contact: Nieuw bericht van website">
                             <input type="hidden" name="_captcha" value="true">
                             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-                            <button type="submit" class="btn-primary">Verstuur bericht</button>
+                            <button type="submit" class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 font-semibold">
+                                Verstuur bericht
+                            </button>
                         </form>
-                        <div id="form-status" role="status" aria-live="polite"></div>
+                        <div id="form-status" class="mt-4 text-center" role="status" aria-live="polite"></div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2024 Daan van den Hombergh. Alle rechten voorbehouden.</p>
-            <nav class="footer-links" aria-label="Footer navigatie">
-                <a href="#about">Over Mij</a>
-                <a href="#contact">Contact</a>
-            </nav>
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">&copy; 2024 Daan van den Hombergh. Alle rechten voorbehouden.</p>
+                <nav class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#about" class="text-gray-400 hover:text-white transition-colors">Over Mij</a>
+                    <a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+                </nav>
+            </div>
         </div>
     </footer>
 
+    <!-- Back to top button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-gradient-to-r from-blue-500 to-purple-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 opacity-0 invisible">
+        <i class="fas fa-chevron-up text-lg"></i>
+    </button>
+
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
 </body>
 </html>
